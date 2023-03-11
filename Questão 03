@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    
+    int i;
+    int num, fat = 1;
+    
+    printf("Digite um número inteiro positivo para calcular o seu fatorial: ");
+    scanf("%d", &num);
+    
+    while(num < 0){
+        printf("\nCONDIÇÃO:\n");
+        printf("ERRO!: Você digitou um número inválido, tente novamente!");
+        printf("\n\nDigite um número inteiro POSITIVO para calcular o seu fatorial: ");
+        scanf("%d", &num);
+    }
+    
+    for(i = 1; i <= num; i++){      //ou for(i=num; i>1; i--){
+        fat *= i;                  //fat *= i;
+    }                             //}
+    
+    
+    printf("\nCÁLCULO:\n");
+    printf("O fatorial de %d é %d", num, fat);
+    return 0;
+}
