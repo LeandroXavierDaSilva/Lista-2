@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    
+    int jose = 150, pedro = 110, anos = 0;
+    
+    puts("PROBLEMA:");
+    puts("Em quantos anos o Pedro será maior que o José?");
+    printf("\nDADOS:");
+    puts("\nJosé tem 150 centímetros e cresce 2 centímetros por ano");
+    puts("Pedro tem 110 centímetros e cresce 3 centímetros por ano");
+    
+    while(pedro <= jose){
+        pedro += 3;
+        jose += 2;
+        anos++;
+    }
+    
+    printf("\nRESULTADO:");
+    printf("\nO Pedro será maior que o José em %d anos.", anos);
+    return 0;
+}
