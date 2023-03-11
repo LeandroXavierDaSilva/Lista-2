@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main(){
+    
+    setlocale(LC_ALL,"Portuguese");
+    
+    int dia;
+    
+    do{
+        printf("1. Domingo / 2. Segunda-feira / 3. Terça-feira / 4. Quarta-feira / 5. Quinta-feira / 6. Sexta-feira / 7. Sábado\n");
+        printf("Digite um número entre 1 e 7 para um dia da semana (ou 0 para sair): ");
+        scanf("%d", &dia);
+
+    switch (dia){
+        case 1:
+        printf("\nDIA DA SEMANA:\nVocê digitou o dia de domingo!\n\n");
+        break;
+        case 2:
+        printf("\nDIA DA SEMANA:\nVocê digitou o dia de segunda-feira!\n\n");
+        break;
+        case 3:
+        printf("\nDIA DA SEMANA:\nVocê digitou o dia de terça-feira!\n\n");
+        break;
+        case 4:
+        printf("\nDIA DA SEMANA:\nVocê digitou o dia de quarta-feira!\n\n");
+        break;
+        case 5:
+        printf("\nDIA DA SEMANA:\nVocê digitou o dia de quinta-feira!\n\n");
+        break;
+        case 6:
+        printf("\nDIA DA SEMANA:\nVocê digitou o dia de sexta-feira!\n\n");
+        break;
+        case 7:
+        printf("\nDIA DA SEMANA:\nVocê digitou o dia de sábado!\n\n");
+        break;
+        case 0:
+        printf("\nCONDIÇÃO:\nSaindo...");
+        break;
+        default:
+        printf("\nERRO:\nNúmero de dia não válido, tente novamente!\n\n");
+        break;
+    }
+    
+    }while (dia != 0);
+
+    return 0;
+}
