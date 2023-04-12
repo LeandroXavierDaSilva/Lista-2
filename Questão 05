@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    
+    int num, max, min;
+    
+    printf("Digite um valor: ");
+    scanf("%d", &num);
+    
+    min = num;
+    max = num;
+    
+    while(num != 0){
+        if(num > max){
+            max = num;
+        }
+        if(num < min){
+            min = num;
+        }
+    
+    printf("Digite outro valor (ou 0 para sair): ");
+    scanf("%d", &num);
+    5. Fazer um programa que receba um valor n no teclado e determine o maior e o menor termo fornecido.
+A condição de término do programa ́e quando o usuário digitar zero.
+
+    }
+    
+    printf("O maior valor digitado foi: %d\n", max);
+    printf("O menor valor digitado foi: %d\n", min);
+    
+    return 0;
+}
