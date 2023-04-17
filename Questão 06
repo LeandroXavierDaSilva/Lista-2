@@ -1,0 +1,83 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int votos_paulo = 0, votos_renata = 0, votos_brancos = 0, votos_nulos = 0;
+    int voto, confirmacao, total_votos, candidato_eleito;
+    float porcentagem_paulo, porcentagem_renata, porcentagem_brancos, porcentagem_nulos;
+    
+    printf("URNA ELETRÔNICA - ELEIÇÃO PRESIDENCIAL\n");
+
+    do{
+        printf("\nDigite o número do candidato (5 - Paulo, 7 - Renata, 0 - Branco, Outro - Nulo): ");
+        scanf("%d", &voto);
+
+        if(voto >= 0){
+            switch(voto){
+                case 5:
+                printf("Confirma o voto para o candidato Paulo? (1 - Sim, 0 - Não): ");
+                scanf("%d", &confirmacao);
+
+                if(confirmacao == 0){
+                printf("Voto cancelado.\n");
+                }else if(confirmacao == 1){
+                    votos_paulo++;
+                }
+                break;
+                case 7:
+                printf("Confirma o voto para a candidata Renata? (1 - Sim, 0 - Não): ");
+                scanf("%d", &confirmacao);
+
+                if(confirmacao == 0){
+                printf("Voto cancelado.\n");
+                }else if(confirmacao == 1){
+                    votos_renata++;
+                }
+                break;
+                case 0:
+                printf("Confirma o voto em branco? (1 - Sim, 0 - Não): ");
+                scanf("%d", &confirmacao);
+
+                if(confirmacao == 0) {
+                printf("Voto cancelado.\n");
+                }else if(confirmacao == 1){
+                    votos_brancos++;
+                }
+                break;
+                default:
+                printf("Confirma o voto nulo? (1 - Sim, 0 - Não): ");
+            scanf("%d", &confirmacao);
+
+            if(confirmacao == 0) {
+                printf("Voto cancelado.\n");
+                }else if(confirmacao == 1){
+                votos_nulos++;
+                }
+                
+            }
+        }
+    
+    }while(voto >= 0);
+
+    total_votos = votos_paulo + votos_renata + votos_brancos + votos_nulos;
+    porcentagem_paulo = (float) votos_paulo / total_votos * 100;
+    porcentagem_renata = (float) votos_renata / total_votos * 100;
+    porcentagem_brancos = (float) votos_brancos / total_votos * 100;
+    porcentagem_nulos = (float) votos_nulos / total_votos * 100;
+
+    printf("\nRELATÓRIO DE VOTAÇÃO:\n");
+    printf("Votos para Paulo (candidato 5): %d (%.2f%%)\n", votos_paulo, porcentagem_paulo);
+    printf("Votos para Renata (candidato 7): %d (%.2f%%)\n", votos_renata, porcentagem_renata);
+    printf("Votos em Branco: %d (%.2f%%)\n", votos_brancos, porcentagem_brancos);
+    printf("Votos Nulos: %d (%.2f%%)\n", votos_nulos, porcentagem_nulos);
+    
+    printf("\nRESULTADO FINAL:");
+
+    if(votos_paulo > votos_renata){
+        printf("\nCandidato eleito: Candidato Paulo!");
+    }else{
+        printf("\nCandidato eleito: Candidata Renata!");
+    }
+
+    return 0;
+}
