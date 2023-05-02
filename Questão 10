@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    
+    printf("CONFIRA OS QUADRADOS DOS MÚLTIPLOS DE 4 (Entre 15 e 90):\n\n");
+
+    for(int i = 15; i < 90; i++){
+            if (i % 4 == 0){
+            printf("O quadrado de %d é %d\n", i, i * i);
+        }
+    }
+
+    return 0;
+}
