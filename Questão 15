@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    
+    int base = 3, potencia, resultado;
+
+    printf("POTÊNCIAS DE 3:\n");
+    
+    for(potencia = 0; potencia <= 7; potencia++){
+        resultado = 1; 
+        
+        for (int i = 0; i < potencia; i++){
+            resultado *= base;
+        }
+        
+        printf("3^%d = %d\n", potencia, resultado);
+    }
+
+    return 0;
+}
