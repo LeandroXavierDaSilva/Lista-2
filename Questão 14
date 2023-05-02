@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    
+    int a, b, quantidade;
+    quantidade = 0;
+    
+    printf("Digite a faixa que você deseja: ");
+    scanf("%d %d", &a, &b);
+    
+    printf("\nNúmeros divisíveis por 3: ");
+
+    if (a < b){
+        for (int i = a; i <= b; i++){
+            if (i % 3 == 0){
+                quantidade += 1;
+                printf("%d ", i);
+            }
+        }
+    }
+
+    if (a > b){
+        for (int i = b; i <= a; i++){
+            if (i % 3 == 0){
+                quantidade += 1;
+                printf("%d ", i);
+            }
+        }
+    }
+
+    printf("\n\nA quantidade de números divisíveis por 3 na faixa de %d até %d é %d", a, b, quantidade);
+
+    return 0;
+}
