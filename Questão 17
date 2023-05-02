@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    
+    float celsius = 10.00, fahrenheit = 0.00;
+    
+    printf("CONVERSÃO DE GRAUS CELSIUS EM GRAUS FAHRENHEIT:\n");
+    
+    while (celsius <= 100.00){
+        fahrenheit = celsius * 1.8 + 32;
+        
+        printf("%.1fº celsius - %.1fº Fahrenheit\n", celsius, fahrenheit);
+        celsius += 10;
+    }
+
+    return 0;
+}
