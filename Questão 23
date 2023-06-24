@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+  int a = 10;
+  int b = 10;
+
+  printf("Valor original de a: %d\n", a);
+  printf("Pré-incrementando a: %d\n", --a);
+  printf("Novo valor de a: %d\n\n", a);
+  printf("Valor original de b: %d\n", b);
+  printf("Pós-incrementando b: %d\n", b--);
+  printf("Novo valor de b: %d\n", b);
+
+  return 0; 
+}
