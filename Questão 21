@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int n, dezena, centena, unidade, unimilhar, dezemilhar;
+    puts("Escreva um número de 5 dígitos: ");
+    scanf("%d", &num);
+
+    dezemilhar = num / 10000;
+    unimilhar = (num%10000) / 1000;
+    centena = ((num%10000) / 100 ) % 10;
+    dezena = ((num%10000) / 10) % 10 ;
+    unidade = num % 10;
+
+    printf("%d%d%d%d%d\n", unidade, dezena, centena, unimilhar, dezemilhar);
+    
+    if (dezemilhar == unidade && unimilhar == dezena){
+        printf("É um palídromo!\n");
+    }
+    else{
+        printf("Não é palídromo!\n");
+    }
+
+    return 0;
+}
