@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int num, digito;
+    int cont = 0;
+    
+    printf("Digite um número inteiro: ");
+    scanf("%d", &num);
+    
+    while (num != 0){
+        digito = num % 10;
+        if (digito == 7){
+            cont+=1;
+        }
+        num /= 10;
+    }
+    
+    printf("O número de dígitos 7 é: %d\n", cont);
+    
+    return 0;
+}
