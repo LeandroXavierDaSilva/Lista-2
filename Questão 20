@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int controle = 0;
+    int num = 0;
+    for (int i = 1; i<= 10; ++i){
+        num = i;
+        int fatorial = 1;
+        if (i%2 != 0){
+            for (controle = num; controle > 1; --controle){
+                fatorial = fatorial * num;
+                num = num -1;
+            }
+        }
+        
+        if (i%2 != 0){
+            printf("%d! = %d\n",i, fatorial);
+        }
+    }
+
+    return 0;
+}
